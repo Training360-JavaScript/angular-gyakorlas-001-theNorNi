@@ -14,11 +14,50 @@ interface IPriceItem {
 })
 export class PricingPageComponent implements OnInit {
 
-  priceTable: IPriceItem[] = [];
+  priceTable: IPriceItem[] = [
+
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.priceTable[0] = {
+      name: "Free",
+      price: 0,
+      options : [
+        "10 tanuló",
+        "2 GB tárhely",
+        "Email támogatás",
+        "Dokumentáció",
+      ],
+      btnText: "Ingyenes regisztráció",
+    };
+
+    this.priceTable[1] = {
+      name: "Pro",
+      price: 15,
+      options : [
+        "20 tanuló",
+        "10 GB tárhely",
+        "Kiemelt email támogatás",
+        "Dokumentáció",
+      ],
+      btnText: "Kezdő lépések",
+    };
+
+    this.priceTable[2] = {
+      name: "Enterprise",
+      price: 29,
+      options : [
+        "100 tanuló",
+        "100 GB tárhely",
+        "Telefonos és email támogatás",
+        "Dokumentáció",
+      ],
+      btnText: "Kontakt",
+    };
+
+
   }
 
 }
